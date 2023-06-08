@@ -1,8 +1,8 @@
 # 9a4iya Api-V1 :
-"""
+'''
 REST Api for project 9a4iya-mobile Application that uses django-restframework .
 This project will generate those endpoint for mobile App. that every user can get grocery online.
-"""
+'''
 ## Features :
 
 * Full featured framework for fast, easy and documented Api with
@@ -15,15 +15,15 @@ This project will generate those endpoint for mobile App. that every user can ge
 1. Architecture :
   * authentication :
   - sign-up :
-        - user can create account with **_email_** and **__password__** 
+      - user can create account with **_email_** and **__password__** 
   - sign-in :
-        - user can  logged with :
-               - crediantial : [email] and [password] or [phone-number]
-               - with Auth-Social Account [facebook]-[Google]-[apple]
+      - user can  logged with :
+            - crediantial : [email] and [password] or [phone-number]
+            - with Auth-Social Account [facebook]-[Google]-[apple]
   - verification account :
-        - user must verify :
-               - email address
-               - phone-number 
+      - user must verify :
+            - email address
+            - phone-number 
     
   
 2. Models:
