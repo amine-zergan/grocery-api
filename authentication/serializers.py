@@ -15,3 +15,6 @@ class SingUpSerializer(serializers.ModelSerializer):
         if email_exist:
             raise validators.ValidationError("email deja exist ")
         return super().validate(attrs)
+    
+    def create(self, validated_data):
+        return super().create(validated_data)
