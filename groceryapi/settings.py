@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'categories',
     'profileuser',
     'cards'
-  
 ]
 
 MIDDLEWARE = [
