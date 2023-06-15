@@ -13,7 +13,7 @@ class Product(models.Model):
     description=models.TextField()
     quantity=models.IntegerField()
     store =models.ForeignKey(Store,related_name="store",on_delete=models.CASCADE)
-    category=models.ManyToManyField(Category)
+    category=models.ForeignKey(Category,related_name="categorie",on_delete=models.CASCADE)
     def __str__(self) -> str:
         return self.name
     
