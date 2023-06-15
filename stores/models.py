@@ -24,8 +24,8 @@ class Store(models.Model):
     lon = models.FloatField()
     lat = models.FloatField()
     created = models.DateTimeField(auto_now_add=True)
-    heur_ouverture=models.CharField(max_length=4,default="08.00",)
-    heur_fermeture=models.CharField(max_length=4,default="20.00",)
+    heur_ouverture=models.CharField(max_length=5,default="08.00",)
+    heur_fermeture=models.CharField(max_length=5,default="20.00",)
     jour_repos=models.CharField(choices=choice_jour,max_length=10)
     updated= models.DateTimeField(auto_now=True)
     def __str__(self):
