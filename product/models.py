@@ -5,11 +5,6 @@ from categories.models import Category
 # Create your models here.
 
 
-class ImageProduct(models.Model):
-    image=models.ImageField(upload_to="product/")
-     
-    def __str__(self) -> str:
-        return self.image.url.split("/")[-1]
 
 
 class Product(models.Model):
@@ -21,10 +16,15 @@ class Product(models.Model):
     description=models.TextField()
     quantity=models.IntegerField()
     store =models.ForeignKey(Store,related_name="store",on_delete=models.CASCADE)
-    image=models.ForeignKey(ImageProduct,related_name="images",on_delete=models.CASCADE)
     category=models.ForeignKey(Category,related_name="categorie",on_delete=models.CASCADE)
     def __str__(self) -> str:
         return self.name
     
 
 
+
+class ImageProduct(models.Model):
+    image=models.ImageField(upload_to="product/")
+    products=models.ForeignKey(Product,related_name="images",on_delete=models.CASCADE )
+    def __str__(self) -> str:
+        return self.image.url.split("/")[-1]
