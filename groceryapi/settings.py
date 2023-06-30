@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'categories',
     'profileuser',
     'cards',
-    "report"
+    "report",
+    "promotions"
 ]
 
 MIDDLEWARE = [
