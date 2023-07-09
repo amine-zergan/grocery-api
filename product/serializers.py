@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Product, ImageProduct
+from brand.serializer import BrandSerializer
  
 
 
@@ -13,6 +14,7 @@ class ProductSerialize(serializers.ModelSerializer):
     #category=CategorieSerialize( )
     #store=StoreSerialize()
     images = ImageProductSerialize(many=True)
+    brands=serializers.StringRelatedField(read_only=False)
     class Meta:
         model=Product
-        fields=["name","reference","weigth","price","units","description","quantity","images"]
+        fields=["id","name","reference","weigth","price","units","description","quantity","images","brands"]
