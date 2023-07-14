@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.views import APIView
 from .models import Product
 from rest_framework.decorators import action
 from .serializers import ProductSerialize
@@ -20,3 +21,8 @@ class ProductView(ModelViewSet):
 
 
 # Create your views here.
+
+
+class ProductApiView(APIView):
+    def get(self, request, format=None):
+        pass
