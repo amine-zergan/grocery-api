@@ -14,7 +14,12 @@ class ProductSerialize(serializers.ModelSerializer):
     #category=CategorieSerialize( )
     #store=StoreSerialize()
     images = ImageProductSerialize(many=True)
-    brands=serializers.StringRelatedField(read_only=False)
+    brands=serializers.StringRelatedField(read_only=True)
     class Meta:
         model=Product
         fields=["id","name","reference","weigth","price","units","description","quantity","images","brands"]
+
+
+#write serialize 
+#read serialize
+# order : date enregement ,
