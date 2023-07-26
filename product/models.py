@@ -31,3 +31,4 @@ class ImageProduct(models.Model):
     products=models.ForeignKey(Product,related_name="images",on_delete=models.CASCADE )
     def __str__(self) -> str:
         return self.image.url.split("/")[-1]
+    
