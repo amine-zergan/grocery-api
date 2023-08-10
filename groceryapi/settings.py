@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "report",
     "promotions",
     "brand",
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -132,6 +133,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+IMPORT_EXPORT_USE_TRANSACTIONS=True
 
 
 # Static files (CSS, JavaScript, Images)
