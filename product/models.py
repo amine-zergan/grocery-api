@@ -20,6 +20,7 @@ class Product(models.Model):
     brand=models.OneToOneField(Brand,related_name="brand",on_delete=models.CASCADE)
     store =models.ForeignKey(Store,related_name="store",on_delete=models.CASCADE)
     category=models.ForeignKey(Category,related_name="products",on_delete=models.CASCADE)
+    
     def __str__(self) -> str:
         return self.name
     
